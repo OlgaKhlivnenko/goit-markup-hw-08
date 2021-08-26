@@ -1,0 +1,67 @@
+.advant {
+  background-color: var(--primary-white-color);
+}
+.advant-content {
+  @extend %list;
+  @media screen and (min-width: $table) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  // &:last-child {
+  //   margin-right: 0;
+  // }
+}
+
+.advant-content__plus {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+
+  text-transform: uppercase;
+  @include text(700, 14px, 1.14, null);
+}
+.advant-content__item {
+  @media screen and (min-width: $table) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    margin-right: var(--card-set-gap);
+    flex-basis: calc(100% / 4 - 30px);
+    // &:last-child {
+    //   margin-right: 0;
+    // }
+  }
+}
+
+.advant-content__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+.advant-content-icon {
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--bacground-fon-color);
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+    height: 120px;
+  }
+  @media screen and (min-width: $table) {
+    width: 354px;
+    height: 120px;
+  }
+  @media screen and (min-width: $desktop) {
+    @include d-flex;
+    width: 270px;
+    height: 120px;
+  }
+}
+.advant-content-icon__pic {
+  padding: 0;
+  margin: 0;
+  border: none;
+}

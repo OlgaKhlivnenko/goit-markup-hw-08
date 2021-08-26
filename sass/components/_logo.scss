@@ -1,0 +1,20 @@
+.logo {
+  padding: 24px 0;
+  color: var(--logo-color);
+  text-decoration: none;
+  @include text(700, 26px, 1.19, null);
+}
+.logo__part {
+  color: var(--accent-color);
+  font-family: Raleway;
+  @include text(700, 26px, 1.19, null);
+}
+.logo-footer {
+  display: block;
+  padding: 0;
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+  text-decoration: none;
+
+  @include text(700, 26px, 1.19, null);
+}
