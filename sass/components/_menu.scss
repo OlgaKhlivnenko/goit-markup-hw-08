@@ -1,0 +1,35 @@
+.menu__button {
+  display: inline-flex;
+
+  @extend %button;
+  background-color: transparent;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu__button .icon-cross {
+  display: none;
+}
+.menu__button.is-open .icon-cross {
+  display: block;
+}
+.menu__button.is-open .icon-menu {
+  display: none;
+}
+.menu-conteiner {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 796px;
+    &.is-open {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    @include d-flex(flex, space-between, null);
+    width: 100%;
+  }
+}
