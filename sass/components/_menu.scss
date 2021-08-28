@@ -1,8 +1,11 @@
 .menu__button {
-  display: inline-flex;
-
+  // display: flex;
   @extend %button;
   background-color: transparent;
+  cursor: pointer;
+  &:hover{
+    fill: var(--accent-color);
+  }
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -18,18 +21,40 @@
 }
 .menu-conteiner {
   @media screen and (max-width: 767px) {
+    padding: 48px 40px;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 796px;
+    background-color: var(--primary-white-color);
     &.is-open {
       display: block;
     }
   }
   @media screen and (min-width: 768px) {
-    @include d-flex(flex, space-between, null);
-    width: 100%;
+   display: flex;
+  align-items: center;
   }
+}
+.link-box{
+  @media screen and (max-width: 767px) {
+ list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-top: 64px;
+}
+@media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.link-box__link{
+  @media screen and (max-width: 767px){
+  text-decoration: none;
+  color: var(--accent-color);
+  @include text(500, 18px, 1.22, null);
+  margin-right: 20px;
+  }
+  
 }
