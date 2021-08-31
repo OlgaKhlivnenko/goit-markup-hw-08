@@ -20,21 +20,44 @@
             <div class="container nav-auth">
                 <nav class="header-nav">
                     <a href="./index.html" class="logo"><span class="logo__part">Web</span>Studio</a>
-                    <button class="menu__button js-open-menu" data-menu-button>
-                        <svg
-                        width="40"
-                        height="40"
-                        aria-label="переключатель меню"
-                        aria-expanded="false"
-                        >
-                            <use class="icon-cross" href="./images/icons.svg#icon-menu-close"></use>
-                            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
-                        </svg>
-                    </button>
-                    <div class="menu-conteiner js-menu-container" data-menu>
-                            
+                    <ul class="header-nav__list">
+                        <li class="header-nav__item"><a href="./index.html" class="header-nav__link header-nav__link--current">Студия</a>
+                        </li>
+                        <li class="header-nav__item"><a href="./portfolio.html" class="header-nav__link">Портфолио</a></li>
+                        <li class="header-nav__item"><a href="" class="header-nav__link">Контакты</a></li>
+                    </ul>
+                    
+                    
+                    <ul class="auth__list">
+                        <li class="auth__item">
+                            <a href="mailto:info@devstudio.com" class="auth__link mail">
+                                <svg class="auth__icon mail" width="16" height="12">
+                                    <use href="./images/sprite.svg#icon-envelope"></use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="auth__item">
+                            <a href="tel:+380961111111" class="auth__link phone">
+                                <svg class="auth__icon phone" width="10" height="16">
+                                    <use href="./images/sprite.svg#icon-phone"></use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="menu">
+                        <button class="menu__button js-open-menu" data-menu-button>
+                            <svg width="40" height="40" aria-label="переключатель меню" aria-expanded="false">
+                                <use class="icon-cross" href="./images/icons.svg#icon-menu-close"></use>
+                                <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+                            </svg>
+                        </button>
+                        <div class="menu-conteiner js-menu-container" data-menu>
+                        
                             <ul class="header-nav__list">
-                                <li class="header-nav__item"><a href="./index.html" class="header-nav__link header-nav__link--current">Студия</a>
+                                <li class="header-nav__item"><a href="./index.html"
+                                        class="header-nav__link header-nav__link--current">Студия</a>
                                 </li>
                                 <li class="header-nav__item"><a href="./portfolio.html" class="header-nav__link">Портфолио</a></li>
                                 <li class="header-nav__item"><a href="" class="header-nav__link">Контакты</a></li>
@@ -59,13 +82,15 @@
                                     </a>
                                 </li>
                             </ul>
-                           <ul class="link-box">
-                               <li><a href="#" class="link-box__link">Instagram</a></li>
-                               <li><a href="#" class="link-box__link">Twitter</a></li>
-                               <li><a href="#" class="link-box__link">Facebook</a></li>
-                               <li><a href="#" class="link-box__link">LinkedIn</a></li>
-                           </ul>
+                            <ul class="link-box">
+                                <li><a href="#" class="link-box__link">Instagram</a></li>
+                                <li><a href="#" class="link-box__link">Twitter</a></li>
+                                <li><a href="#" class="link-box__link">Facebook</a></li>
+                                <li><a href="#" class="link-box__link">LinkedIn</a></li>
+                            </ul>
+                        </div>
                     </div>
+                    
                 </nav>
             </div>
         </header>  
