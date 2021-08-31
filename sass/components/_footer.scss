@@ -1,6 +1,4 @@
 .footer {
-  // display: flex;
-  // flex-direction: column;
   width: 100%;
   background-color: var(--footer-color);
 }
@@ -12,16 +10,19 @@
   }
   @media screen and (min-width: 768px){
     flex-direction: row;
-    align-items: flex-start;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-content: space-between;
   }
-  
-  // width: 100%;
+}
+.footer__adress, .join{
+  align-items: flex-start;
+}
+.subscribe{
+  width: 50%;
 }
 .footer__adress {
   text-align: center
-  
-  // margin-right: 70px;
 }
 .adress__list {
   @extend %list;
@@ -35,7 +36,6 @@
   display: block;
   margin-bottom: 60px;
   }
-  
 }
 .adress__text {
   color: var(--primary-white-color);
@@ -61,10 +61,9 @@
    @media screen and (min-width: 480px){
      margin-bottom: 60px;
    }
-  // margin-right: 70px;
+  
 }
 .footer__title {
-  // margin-bottom: 20px;
   text-transform: uppercase;
   @include text(700, 14px, 1.142, null);
   color: var(--primary-white-color);
@@ -77,7 +76,6 @@
 .join__list {
   @include d-flex(flex, center, null);
   @extend %list;
-  // margin-bottom: 30px;
 }
 .join__item {
   &:not(:last-child) {
@@ -101,21 +99,23 @@
 .join__icon {
   fill: currentColor;
 }
-// .subscribe{
-//   display: flex;
-// }
+
 .subscribe__form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (min-width: 1200px){
+    flex-direction:row;
+
+  }
 }
 .subscribe__form input::placeholder {
-  // padding: 15px 16px;
+  padding: 15px 16px;
   font-size: 16px;
   line-height: 1.25;
 }
 .subscribe__mail {
-  
+  padding: 0;
   height: 50px;
   background-color: var(--footer-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -124,27 +124,24 @@
   border-radius: 4px;
   outline: none;
   color: var(--primary-white-color);
-  padding: 15px 16px;
   font-size: 16px;
   line-height: 1.25;
   @media screen and (min-width: 480px){
     width: 450px;
     margin-bottom: 20px;
   }
+    @media screen and (min-width: 1200px){
+  width: 358px;
+  margin: 0;
+  }
 }
 
-// .subscribe__form label {
-//   margin-right: 12px;
-//   max-width: 358px;
-// }
 .subscribe__btn {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-
-  
   min-width: 200px;
-
+  padding: 10px 29px;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   @extend %box;
@@ -152,9 +149,6 @@
 
   cursor: pointer;
   transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
- @media screen and (min-width: 480px){
-  padding: 10px 29px;
- }
 }
 .subscribe__btn svg {
   margin-left: 10px;
