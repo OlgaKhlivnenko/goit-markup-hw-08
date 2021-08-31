@@ -1,9 +1,5 @@
-.clients {
-  // padding: 94px 0;
-}
 .clients__title {
   background-color: var(--primary-white-color);
-  
 }
 .company {
   display: flex;
@@ -13,23 +9,31 @@
   margin-bottom: -30px;
 }
 .company__item {
-  @media screen and (min-width: 480px){
-    margin-right: 30px;
-    margin-bottom: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
   &:nth-child(2n) {
     margin-right: 0;
   }
-  }
-   @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     &:nth-child(2n) {
-    margin-right: 30px;
+      margin-right: 30px;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
+  @media screen and (min-width: 1200px) {
+    &:nth-child(3n) {
+      margin-right: 30px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 .company__link {
+  @include d-flex;
+  width: 210px;
   height: 92px;
   color: var(--icon-color);
   fill: currentColor;
@@ -44,11 +48,10 @@
     border: 1px solid var(--accent-color);
     fill: var(--accent-color);
   }
-  @media screen and (min-width: 480px){
-     @include d-flex;
-    width: 210px;
-  }
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
   }
 }

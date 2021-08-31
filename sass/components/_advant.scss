@@ -3,77 +3,71 @@
 }
 .advant-content {
   @extend %list;
-  @media screen and (min-width: 480px){
+  @media screen and (min-width: 480px) {
     margin-bottom: -30px;
   }
-  
-  @media screen and (min-width: $table) {
+
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
   }
-  // &:last-child {
-  //   margin-right: 0;
-  // }
 }
-
 .advant-content__plus {
-  // margin-top: 0;
-  // margin-bottom: 10px;
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 10px;
   color: var(--title-text-color);
 
   text-transform: uppercase;
   @include text(700, 14px, 1.14, null);
-  @media screen and (min-width: 480px){
-    text-align: center;
-    margin-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
   }
 }
 .advant-content__item {
-  @media screen and (min-width: 480px){
+  @media screen and (min-width: 480px) {
     margin-bottom: 30px;
   }
   @media screen and (min-width: 768px) {
-    flex-basis: calc(100% / 2 - 30px);
-    margin: 15px;
-  }
-  @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: column;
+    margin-right: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
     margin-right: var(--card-set-gap);
-    flex-basis: calc(100% / 4 - 30px);
+    flex-basis: calc((100% - 3 * var(--card-set-gap)) / 4);
+    &:nth-child(2n) {
+      margin-right: 30px;
+    }
     &:last-child {
       margin-right: 0;
     }
   }
 }
-
 .advant-content__text {
-  // margin-top: 0;
-  // margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   line-height: 1.7;
 }
 .advant-content-icon {
-  // @include d-flex;
-  // margin-bottom: 30px;
+  @include d-flex;
+  height: 120px;
+  margin-bottom: 30px;
   border-radius: 4px;
   background-color: var(--bacground-fon-color);
   @media screen and (min-width: 480px) {
     width: 450px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
   }
   @media screen and (min-width: 768px) {
     width: 354px;
-    height: 120px;
   }
   @media screen and (min-width: 1200px) {
     @include d-flex;
     width: 270px;
-    height: 120px;
   }
 }
 .advant-content-icon__pic {
