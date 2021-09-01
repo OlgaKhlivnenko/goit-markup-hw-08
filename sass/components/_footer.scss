@@ -3,26 +3,28 @@
   background-color: var(--footer-color);
 }
 .footer__block {
-  @media screen and (min-width: 480px){
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-between;
+    align-items: baseline;
   }
 }
-.footer__adress, .join{
+.footer__adress,
+.join {
   align-items: flex-start;
 }
-.subscribe{
+.subscribe {
   width: 50%;
 }
 .footer__adress {
-  text-align: center
+  text-align: center;
 }
 .adress__list {
   @extend %list;
@@ -32,9 +34,9 @@
   margin-top: 9px;
 }
 .adress {
-  @media screen and (min-width: 480px){
-  display: block;
-  margin-bottom: 60px;
+  @media screen and (min-width: 480px) {
+    display: block;
+    margin-bottom: 60px;
   }
 }
 .adress__text {
@@ -43,7 +45,6 @@
   font-style: normal;
 }
 .adress__link {
-  
   margin-top: 9px;
   color: var(--link-color);
   text-decoration: none;
@@ -58,17 +59,16 @@
 }
 
 .join {
-   @media screen and (min-width: 480px){
-     margin-bottom: 60px;
-   }
-  
+  @media screen and (min-width: 480px) {
+    margin-bottom: 60px;
+  }
 }
 .footer__title {
   text-transform: uppercase;
   @include text(700, 14px, 1.142, null);
   color: var(--primary-white-color);
 
-  @media screen and (min-width: 480px){
+  @media screen and (min-width: 480px) {
     margin-bottom: 20px;
     text-align: center;
   }
@@ -79,7 +79,7 @@
 }
 .join__item {
   &:not(:last-child) {
-     margin-right: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -104,9 +104,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (min-width: 1200px){
-    flex-direction:row;
-
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
   }
 }
 .subscribe__form input::placeholder {
@@ -126,13 +125,13 @@
   color: var(--primary-white-color);
   font-size: 16px;
   line-height: 1.25;
-  @media screen and (min-width: 480px){
+  @media screen and (min-width: 480px) {
     width: 450px;
     margin-bottom: 20px;
   }
-    @media screen and (min-width: 1200px){
-  width: 358px;
-  margin: 0;
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin: 0;
   }
 }
 
