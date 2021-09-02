@@ -1372,6 +1372,13 @@ input:-webkit-autofill:active {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__adress {
+    text-align: start;
+    margin-right: 70px;
+  }
+}
+
 .adress__list {
   display: block;
 }
@@ -1407,9 +1414,13 @@ input:-webkit-autofill:active {
   color: var(--accent-color);
 }
 
-@media screen and (min-width: 480px) {
+.join {
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
   .join {
-    margin-bottom: 60px;
+    margin-right: 93px;
   }
 }
 
