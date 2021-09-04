@@ -46,9 +46,11 @@
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  }
+
 .work__link:hover,
 .work__link:focus {
+  outline: none;
   color: var(--title-text-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -69,8 +71,8 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.work__item:hover .card-tunb::before,
-.work__item:focus .card-tunb::before {
+.work__link:hover .card-tunb::before,
+.work__link:focus .card-tunb::before {
   transform: translateY(0);
   opacity: 1;
 }
@@ -89,8 +91,8 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.work__item:hover .card-tunb__text,
-.work__item:focus .card-tunb__text {
+.work__link:hover .card-tunb__text,
+.work__link:focus .card-tunb__text {
   transform: translateY(0);
   opacity: 1;
 }

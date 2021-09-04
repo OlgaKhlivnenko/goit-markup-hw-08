@@ -23,17 +23,18 @@
   }
   @media screen and (min-width: 1200px) {
     display: flex;
+    
   }
 }
 .header-nav__list {
   @media screen and (min-width: 768px) {
     display: flex;
+    margin-left: 93px;
   }
 }
 .header-nav__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  
   text-decoration: none;
   color: var(--title-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -47,6 +48,8 @@
   }
   @media screen and (min-width: 768px) {
     @include text(500, 14px, 1.143, null);
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 .header-nav__item {
@@ -83,7 +86,7 @@
   }
 }
 .auth__list {
-  @extend %list;
+ @extend %list;
   margin-bottom: -10px;
 }
 
@@ -92,6 +95,7 @@
   @media screen and (min-width: 768px) {
     display: block;
   }
+  
 }
 .auth__link {
   color: var(--primary-text-color);
@@ -109,6 +113,10 @@
   }
   @media screen and (min-width: 1200px) {
     @include text(500, 14px, 1.14, null);
+      display: flex;
+      align-items: center;
+      padding-top: 32px;
+      padding-bottom: 32px;
   }
 }
 .auth__link.phone {
@@ -121,6 +129,9 @@
   @media screen and (max-width: 767px) {
     @include text(500, 24px, 1.172, null);
     margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
   }
 }
 .auth__item + .auth__item {

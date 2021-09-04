@@ -3,11 +3,11 @@
   background-color: var(--footer-color);
 }
 .footer__block {
-  @media screen and (min-width: 480px) {
+ 
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+  
   @media screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -38,10 +38,13 @@
   margin-top: 9px;
 }
 .adress {
-  @media screen and (min-width: 480px) {
+  
     display: block;
     margin-bottom: 60px;
-  }
+ 
+  @media screen and (min-width: 1200px) {
+  margin-bottom: 0;
+}
 }
 .adress__text {
   color: var(--primary-white-color);
@@ -66,17 +69,16 @@
   margin-bottom: 60px;
   @media screen and (min-width: 1200px) {
     margin-right: 93px;
+    margin-bottom: 0;
   }
 }
 .footer__title {
   text-transform: uppercase;
   @include text(700, 14px, 1.142, null);
   color: var(--primary-white-color);
-
-  @media screen and (min-width: 480px) {
     margin-bottom: 20px;
     text-align: center;
-  }
+  
 }
 .join__list {
   @include d-flex(flex, center, null);
@@ -129,14 +131,16 @@
   color: var(--primary-white-color);
   font-size: 16px;
   line-height: 1.25;
-  @media screen and (min-width: 480px) {
-    width: 450px;
+  
+    width: 100%;
     margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    width: 450px;
+    margin: 0;
   }
   @media screen and (min-width: 1200px) {
     width: 358px;
-    margin: 0;
-  }
+  }  
 }
 
 .subscribe__btn {

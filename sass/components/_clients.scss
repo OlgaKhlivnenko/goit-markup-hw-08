@@ -11,9 +11,11 @@
 .company__item {
   margin-right: 30px;
   margin-bottom: 30px;
+  @media screen and (min-width: 480px) {
   &:nth-child(2n) {
     margin-right: 0;
   }
+}
   @media screen and (min-width: 768px) {
     &:nth-child(2n) {
       margin-right: 30px;

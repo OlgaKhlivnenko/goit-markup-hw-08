@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   height: 400px;
-  width: 100%;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bcg.jpg);
   background-color: var(--footer-color);
@@ -12,6 +13,7 @@
   background-repeat: no-repeat;
   @media screen and (min-width: 1200px) {
     height: 600px;
+    max-width: 1600px;
   }
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -21,10 +23,15 @@
   }
 }
 .oder__title {
-  @include text(900, 26px, 1.615, center);
+  font-family: Roboto;
   letter-spacing: 0.06em;
   margin-bottom: 30px;
   color: var(--primary-white-color);
+  @include text(900, 20px, 1.615, center);
+  @media screen and (min-width: 480px) {
+  @include text(900, 26px, 1.615, center);
+  }
+  
   @media screen and (min-width: 1200px) {
     @include text(900, 44px, 1.36, center);
   }
@@ -37,7 +44,7 @@
   background-color: var(--accent-color);
 
   @include text(700, 16px, 1.875, center);
-
+  letter-spacing: 0.06em;
   cursor: pointer;
   transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
