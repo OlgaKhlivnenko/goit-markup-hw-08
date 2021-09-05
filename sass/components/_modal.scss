@@ -175,13 +175,18 @@ input:-webkit-autofill:active {
 
 .agree {
   position: relative;
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   left: 16px;
   margin-bottom: 30px;
   cursor: pointer;
   font-family: Roboto;
   @include text(400, 12px, 1.172, null);
   letter-spacing: 0.03em;
+ @media screen and (min-width: 480px){
+display: flex;
+ }
+
 @media screen and (min-width: 1200px) {
     @include d-flex(flex, null, baseline);
     @include text(400, 14px, 1.172, null);

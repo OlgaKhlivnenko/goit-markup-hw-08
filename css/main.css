@@ -1338,9 +1338,11 @@ input:-webkit-autofill:active {
 
 .agree {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   left: 16px;
   margin-bottom: 30px;
   cursor: pointer;
@@ -1349,6 +1351,14 @@ input:-webkit-autofill:active {
   font-size: 12px;
   line-height: 1.172;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 480px) {
+  .agree {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media screen and (min-width: 1200px) {
